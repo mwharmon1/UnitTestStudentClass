@@ -33,5 +33,9 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             student = s.Student('Harmon', '200', 'BIS')
 
+    def test_object_not_created_error_major(self):
+        with self.assertRaises(ValueError):
+            student = s.Student('Harmon', 'Michael', '12345')
+
 if __name__ == '__main__':
     unittest.main()
