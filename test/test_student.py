@@ -48,6 +48,10 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             student = s.Student('Harmon', 'Michael', 'BIS', 'Bad GPA')
 
+    def test_object_not_created_error_gpa_not_in_range(self):
+        with self.assertRaises(ValueError):
+            student = s.Student('Harmon', 'Michael', 'BIS', 5.0)
+
 
 if __name__ == '__main__':
     unittest.main()
