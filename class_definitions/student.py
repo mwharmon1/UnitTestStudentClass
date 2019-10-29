@@ -4,6 +4,9 @@
 
 class Student:
     def __init__(self, lname, fname, major, gpa=0.0):
+        valid_name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'-")
+        if not (valid_name_characters.issuperset(lname)):
+            raise ValueError
         self.last_name = lname
         self.first_name = fname
         self.major = major
