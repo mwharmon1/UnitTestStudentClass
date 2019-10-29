@@ -25,6 +25,9 @@ class MyTestCase(unittest.TestCase):
     def test_student_str(self):
         self.assertEqual(str(self.student), "Harmon, Michael has major BIS with gpa: 0.0")
 
+    def test_object_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            student = s.Student('100', 'Michael', 'BIS')
 
 if __name__ == '__main__':
     unittest.main()
