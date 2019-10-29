@@ -7,6 +7,8 @@ class Student:
         valid_name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'-")
         if not (valid_name_characters.issuperset(lname) and valid_name_characters.issuperset(fname)):
             raise ValueError
+        if not (valid_name_characters.issuperset(major)):
+            raise ValueError
         self.last_name = lname
         self.first_name = fname
         self.major = major
